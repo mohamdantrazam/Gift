@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f9dfe8">
+<title>A Little Surprise For You ♡</title>
+<style>
+:root{--pink:#f8dfe7;--pink2:#f5cbd9;--rose:#bd526f;--deep:#73394d;--ink:#4f3440;--cream:#fff9f7;--muted:#9d7584;--line:#edbdcd;--shadow:0 16px 45px #a64e6b18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f8e2e9;color:var(--ink);font-family:Georgia,"Times New Roman",serif;min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 18%,#fff9f7 0,transparent 25%),radial-gradient(circle at 88% 65%,#f3c5d5 0,transparent 28%),linear-gradient(135deg,#fff4f5,#f7dce6 55%,#fcecf0)}
+.top{max-width:1050px;margin:auto;padding:22px 22px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#a85b73}.tiny-heart{color:#c45a7a;font-size:20px}.sound{border:1px solid #e9b6c7;background:#fff8faad;color:#9b526b;border-radius:99px;padding:9px 13px;font-size:12px}
+main{width:min(100%,850px);margin:auto;padding:12px 18px 55px}.intro{text-align:center;padding:28px 12px 15px}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#b66b82;font:10px Arial,sans-serif}.intro h1{font-weight:normal;font-size:clamp(34px,8vw,59px);line-height:1.06;margin:14px 0 10px;color:#a84666}.intro p{font-size:15px;color:#986c7c;margin:0;line-height:1.7}.hero-card{position:relative;max-width:650px;margin:22px auto 0;background:#fff8f6;border:1px solid #edc2d0;border-radius:24px;padding:19px;box-shadow:var(--shadow);overflow:hidden}.hero-card:before,.hero-card:after{content:"♡";position:absolute;color:#f0c4d2;font-size:42px;opacity:.8}.hero-card:before{top:5px;left:13px;transform:rotate(-18deg)}.hero-card:after{bottom:0;right:15px;transform:rotate(16deg)}
+.photo-row{display:flex;justify-content:center;align-items:center;gap:10px;min-height:160px;padding:7px 15px 15px}.photo{width:31%;height:148px;object-fit:cover;border-radius:48% 48% 12px 12px;border:4px solid white;box-shadow:0 6px 20px #8b42531c;transform:rotate(-4deg);background:#f3d2dc}.photo:nth-child(2){height:170px;transform:rotate(3deg);z-index:1}.photo:nth-child(3){transform:rotate(5deg)}.photo-placeholder{display:flex;align-items:center;justify-content:center;color:#c2748c;font-size:39px;background:linear-gradient(145deg,#fbeaf0,#f2c6d6)}
+.code-title{text-align:center;font-size:22px;font-weight:normal;margin:2px 0 5px;color:#9c4c68}.code-sub{text-align:center;font:12px Arial,sans-serif;color:#b18493;margin:0 0 17px}.dots{display:flex;direction:ltr;justify-content:center;gap:11px;margin:0 0 17px}.dots span{width:12px;height:12px;border-radius:50%;border:1px solid #d9a1b5;background:transparent;transition:.2s}.dots span.filled{background:#bf5a78;box-shadow:0 0 0 4px #f7dce5}.keypad{width:min(100%,275px);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;direction:ltr}.key{height:43px;border:1px solid #edc5d1;border-radius:12px;background:#fffdfc;color:#92506a;font:16px Arial,sans-serif;box-shadow:0 3px 0 #f1d4dd;transition:transform .1s,background .1s}.key:active{transform:translateY(2px);box-shadow:none;background:#fbe8ee}.key.utility{font-size:12px;background:#fcecf1}.key.enter{background:#c45d7a;color:white;border-color:#c45d7a;font-size:12px;letter-spacing:.5px}.hint{text-align:center;min-height:20px;margin:13px 0 0;color:#b66b82;font:11px Arial,sans-serif}.hint.error{color:#bd3859}.micro{text-align:center;font:10px Arial,sans-serif;color:#c49aaa;margin-top:8px}
+.unlocked{display:none;animation:rise .8s ease both}.unlocked.show{display:block}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.unlock-title{text-align:center;margin:35px 0 18px}.unlock-title .sparkle{font-size:25px;color:#bf5d7a}.unlock-title h2{font-size:clamp(30px,7vw,46px);font-weight:normal;color:#a84666;margin:5px 0}.unlock-title p{color:#986c7c;font-size:14px;margin:0}
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gift{border:1px solid #eab9c9;border-radius:17px;background:#fff8f7;min-height:155px;padding:17px 10px;text-align:center;color:var(--ink);box-shadow:0 8px 25px #9f4a6610;transition:transform .2s,box-shadow .2s}.gift:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.gift .emoji{display:block;font-size:34px;margin-bottom:9px}.gift strong{font-size:16px;font-weight:normal;color:#a84666;display:block}.gift small{font:10px Arial,sans-serif;color:#b18493;display:block;margin-top:5px}.unlock-note{text-align:center;font-size:12px;color:#b18493;margin:18px 0 0}
+.end-note{text-align:center;margin:48px auto 0;color:#b56e84;font-size:13px}.end-note .flourish{font-size:27px;display:block;margin-bottom:5px}
+.modal{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:17px;background:#44243166;backdrop-filter:blur(6px)}.modal.open{display:flex}.modal-card{width:min(100%,570px);max-height:88vh;overflow:auto;background:#fff8f6;border:1px solid #e8b9c9;border-radius:22px;padding:24px 22px 25px;box-shadow:0 25px 90px #5c263a38;position:relative;animation:rise .25s ease}.close{position:absolute;top:11px;right:13px;width:34px;height:34px;border-radius:50%;border:1px solid #ecc8d3;background:white;color:#a54d69;font-size:20px}.modal-card h2{text-align:center;color:#a84666;font-size:31px;font-weight:normal;margin:7px 25px 16px}.modal-content{font-size:16px;line-height:1.9;color:#745160;text-align:center}.letter-paper{background:#fff0e8;border:1px solid #efc6c1;border-radius:12px;padding:24px 20px;text-align:left;white-space:pre-wrap;font-size:15px;line-height:1.9;color:#704755;background-image:repeating-linear-gradient(transparent,transparent 31px,#efc9c6 32px)}.rose-art{font-size:72px;text-align:center;filter:drop-shadow(0 8px 8px #a44d5a20)}.playlist{background:#f8e4ea;border-radius:16px;padding:17px}.record{width:120px;height:120px;border-radius:50%;margin:10px auto 18px;background:repeating-radial-gradient(circle,#17151b 0 2px,#29242b 3px 5px);display:grid;place-items:center;animation:spin 12s linear infinite}.record span{width:43px;height:43px;border-radius:50%;background:radial-gradient(circle,#eaa4ad 0 5px,#f5c5cb 6px 19px,#be5a72 20px);border:2px solid #f7dce3}@keyframes spin{to{transform:rotate(360deg)}}.music-controls{display:flex;justify-content:center;gap:10px;margin-top:12px}.music-controls button,.modal-action{border:1px solid #e6b7c6;border-radius:99px;background:#fff9f8;color:#a54d69;padding:10px 17px}.modal-action{display:inline-block;margin-top:17px;background:#bd5877;color:white;border-color:#bd5877}.upload-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}.upload-row label{font:12px Arial,sans-serif;background:#fff;border:1px solid #e6b7c6;border-radius:99px;padding:9px 12px;color:#a54d69;cursor:pointer}.upload-row input{display:none}
+@media(max-width:560px){.top{padding:16px 16px 5px}.intro{padding-top:22px}.hero-card{padding:14px 12px;border-radius:19px}.photo-row{gap:6px;padding-inline:10px;min-height:136px}.photo{height:125px}.photo:nth-child(2){height:146px}.keypad{gap:7px}.key{height:42px}.gifts{grid-template-columns:repeat(2,1fr);gap:9px}.gift{min-height:145px}.modal-card{padding:22px 16px}.letter-paper{padding:20px 14px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">A LITTLE SURPRISE <span class="tiny-heart">♡</span></div>
+  <button class="sound" id="soundBtn" type="button">♫ Music options</button>
+</header>
+<main>
+  <section class="intro">
+    <div class="eyebrow">made with love · just for you</div>
+    <h1>A secret little surprise</h1>
+    <p>Some things are more special when you discover them yourself.</p>
+  </section>
+  <section class="hero-card" aria-label="Secret code">
+    <div class="photo-row" id="photoRow">
+      <div class="photo photo-placeholder">♡</div>
+      <div class="photo photo-placeholder">✿</div>
+      <div class="photo photo-placeholder">♡</div>
+    </div>
+    <h2 class="code-title">Enter our secret code</h2>
+    <p class="code-sub">A little number that means something to us</p>
+    <div class="dots" id="dots" aria-label="Code digits"><span></span><span></span><span></span><span></span></div>
+    <div class="keypad" id="keypad">
+      <button class="key" data-digit="1">1</button><button class="key" data-digit="2">2</button><button class="key" data-digit="3">3</button>
+      <button class="key" data-digit="4">4</button><button class="key" data-digit="5">5</button><button class="key" data-digit="6">6</button>
+      <button class="key" data-digit="7">7</button><button class="key" data-digit="8">8</button><button class="key" data-digit="9">9</button>
+      <button class="key utility" id="clearBtn">CLEAR</button><button class="key" data-digit="0">0</button><button class="key enter" id="enterBtn">UNLOCK ♡</button>
+    </div>
+    <p class="hint" id="hint" aria-live="polite">Four digits. Take your time ♡</p>
+    <div class="micro">a small world made just for you</div>
+    <div class="upload-row">
+      <label for="photosInput">＋ Add our photos<input id="photosInput" type="file" accept="image/*" multiple></label>
+    </div>
+  </section>
+
+  <section class="unlocked" id="unlocked">
+    <div class="unlock-title"><div class="sparkle">✧　♡　✧</div><h2>You unlocked it!</h2><p>Your surprises were waiting for you.</p></div>
+    <div class="gifts">
+      <button class="gift" data-open="letter"><span class="emoji">💌</span><strong>Letter From My Heart</strong><small>a few words for you</small></button>
+      <button class="gift" data-open="tulips"><span class="emoji">🌷</span><strong>Your Favorite Tulips</strong><small>flowers, just because</small></button>
+      <button class="gift" data-open="playlist"><span class="emoji">🎵</span><strong>A Playlist For You</strong><small>press play in your heart</small></button>
+      <button class="gift" data-open="memories"><span class="emoji">📸</span><strong>Our Little Memories</strong><small>moments worth keeping</small></button>
+      <button class="gift" data-open="gift"><span class="emoji">🎁</span><strong>One More Surprise</strong><small>there is something else</small></button>
+      <button class="gift" data-open="promise"><span class="emoji">♡</span><strong>A Little Promise</strong><small>something to remember</small></button>
+    </div>
+    <p class="unlock-note">There is no rush. Open each little gift whenever you like. ♡</p>
+  </section>
+  <div class="end-note"><span class="flourish">❦</span>made for you, with all my love</div>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <button class="close" id="closeModal" aria-label="Close">×</button>
+    <h2 id="modalTitle">A little surprise</h2>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+<audio id="audio" loop></audio>
+<script>
+/* CUSTOMIZE HERE:
+   Change SECRET_CODE to your own four-digit code.
+   Replace the sample letter text and the surprise messages below.
+   For a song, add your own MP3 file in the music options and choose it.
+*/
+const SECRET_CODE = "2509";
+const LETTER_TEXT = `My love,
+
+I wanted to make something small, but full of the things I sometimes find difficult to say all at once.
+
+You make ordinary moments feel special. Even from far away, you bring warmth into my days, and your happiness means more to me than you know.
+
+I hope this little page makes you smile. Whenever you open it, remember that someone is thinking of you, cheering for you, and wishing you beautiful things.
+
+With all my love,
+Yours ♡`;
+let entered = "";
+const $ = id => document.getElementById(id);
+const hint = $("hint");
+function updateDots(){[...$("dots").children].forEach((dot,i)=>dot.classList.toggle("filled",i<entered.length))}
+function addDigit(d){if(entered.length>=4)return;entered+=d;updateDots();hint.classList.remove("error");hint.textContent=entered.length===4?"Ready? Press UNLOCK ♡":"Four digits. Take your time ♡"}
+function clearCode(){entered="";updateDots();hint.classList.remove("error");hint.textContent="Four digits. Take your time ♡"}
+function unlock(){if(entered===SECRET_CODE){$("unlocked").classList.add("show");hint.textContent="Unlocked with love ♡";$("unlocked").scrollIntoView({behavior:"smooth",block:"start"});document.querySelector(".code-title").textContent="A little world, just for you";$("keypad").style.display="none";$("dots").style.display="none";document.querySelector(".code-sub").textContent="You found your way in ♡";}else{hint.textContent="Not quite — try the special date again ♡";hint.classList.add("error");const card=document.querySelector(".hero-card");card.animate([{transform:"translateX(-4px)"},{transform:"translateX(4px)"},{transform:"translateX(-3px)"},{transform:"translateX(0)"}],{duration:260});entered="";updateDots()}}
+$("keypad").addEventListener("click",e=>{const b=e.target.closest("[data-digit]");if(b)addDigit(b.dataset.digit)});
+$("clearBtn").addEventListener("click",clearCode);$("enterBtn").addEventListener("click",unlock);
+document.addEventListener("keydown",e=>{if(/^\d$/.test(e.key))addDigit(e.key);if(e.key==="Backspace") {entered=entered.slice(0,-1);updateDots()}if(e.key==="Enter")unlock();if(e.key==="Escape")closeModal()});
+function openModal(key){
+ const modal=$("modal"),title=$("modalTitle"),content=$("modalContent");
+ const views={
+ letter:["Letter From My Heart",`<div class="letter-paper">${escapeText(LETTER_TEXT)}</div>`],
+ tulips:["Your Favorite Tulips",`<div class="rose-art">💐</div><p>For you — because flowers are lovely, but the smile they bring to your face is even lovelier.</p><p>May your days bloom with little reasons to be happy. 🌷</p>`],
+ playlist:["A Playlist Made For You",`<div class="playlist"><div class="record"><span></span></div><p><strong>Our little soundtrack</strong></p><p>Pick a song that reminds you of us, then add it below to play it here.</p><div class="music-controls"><button id="playBtn">▶ Play</button><button id="pauseBtn">Ⅱ Pause</button></div><div class="upload-row"><label for="songInput">＋ Choose an audio file<input id="songInput" type="file" accept="audio/*"></label></div><p id="musicStatus" style="font-size:12px"></p></div>`],
+ memories:["Our Little Memories",`<p>Every photo holds a moment. Every moment becomes part of our story.</p><div id="memoryGallery" class="photo-row" style="flex-wrap:wrap"></div><p>Add photos on the main page to see them here. ♡</p>`],
+ gift:["One More Surprise",`<div class="rose-art">🎁</div><p>Here is your reminder that you are appreciated more than a screen can show.</p><p>One day, let's make a memory that is even better than this little surprise.</p><p style="font-size:26px;color:#bd5877">♡</p>`],
+ promise:["A Little Promise",`<p style="font-size:22px;color:#a84666">I promise to keep choosing kindness, honesty, and the little moments with you.</p><p>Not only on special days, but in ordinary ones, too.</p><p style="font-size:28px">♡</p>`]
+ };
+ const v=views[key]||views.gift;title.textContent=v[0];content.innerHTML=v[1];modal.classList.add("open");
+ if(key==="playlist"){ $("playBtn").onclick=()=>{if($("audio").src){$("audio").play();$("musicStatus").textContent="Playing your chosen song ♡"}else $("musicStatus").textContent="Choose an audio file first ♡"};$("pauseBtn").onclick=()=>{$("audio").pause();$("musicStatus").textContent="Paused for now ♡"};$("songInput").onchange=e=>{const f=e.target.files[0];if(f){$("audio").src=URL.createObjectURL(f);$("musicStatus").textContent="Ready: "+f.name+" — press Play ♡"}}}
+ if(key==="memories")renderGallery($("memoryGallery"));
+}
+function escapeText(s){const d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function closeModal(){$("modal").classList.remove("open")}
+$("closeModal").onclick=closeModal;$("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeModal()});
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>openModal(b.dataset.open)));
+let photoURLs=[];
+function renderGallery(target){target.innerHTML="";if(!photoURLs.length){target.innerHTML='<div class="photo photo-placeholder">♡</div><div class="photo photo-placeholder">✿</div><div class="photo photo-placeholder">♡</div>';return}photoURLs.forEach(src=>{const img=document.createElement("img");img.src=src;img.className="photo";img.style.transform="none";target.appendChild(img)})}
+$("photosInput").addEventListener("change",e=>{const files=[...e.target.files].slice(0,12);if(!files.length)return;photoURLs.forEach(URL.revokeObjectURL);photoURLs=files.map(f=>URL.createObjectURL(f));const row=$("photoRow");row.innerHTML="";photoURLs.slice(0,3).forEach(src=>{const img=document.createElement("img");img.src=src;img.className="photo";row.appendChild(img)});if(photoURLs.length===1){row.innerHTML+= '<div class="photo photo-placeholder">♡</div><div class="photo photo-placeholder">✿</div>'}else if(photoURLs.length===2){row.innerHTML+='<div class="photo photo-placeholder">♡</div>'} });
+$("soundBtn").addEventListener("click",()=>openModal("playlist"));
+</script>
+</body>
+</html>
